@@ -33,7 +33,7 @@ function downloadCard() {
 
     html2canvas(envelopeContainer).then(canvas => {
         const link = document.createElement("a");
-        link.download = "valentine-specialcard.png";
+        link.download = "Happy-Hearts'-Day-specialcard.png";
         link.href = canvas.toDataURL();
         link.click();
     });
@@ -59,6 +59,7 @@ function showAlert(message) {
 function closeAlert() {
     document.getElementById("customAlert").style.display = "none";
 }
+
 
 
 
