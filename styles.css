@@ -1,0 +1,195 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    text-align: center;
+    padding: 30px;
+}
+
+h2{
+    color: #e91e63;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 2px;
+    width: 90%x;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 2px;
+    border: 1px solid red;
+}
+
+button {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 2px;
+    background: #F26076;
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: red;
+}
+
+#card h2 {
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    #card {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Base card */
+/* Template 1 - Classic Pink */
+.classic {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+
+}
+
+/* Template 2 - Romantic Red */
+.romantic {
+    background: linear-gradient(to right, #c31432, #240b36);
+}
+
+/* Template 3 - Cute Pastel */
+.cute {
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    color: #8e004f;
+}
+.romantic {
+    background: linear-gradient(to right, #c31432, #240b36);
+    box-shadow: 0 0 20px rgba(255,0,0,0.6);
+}
+.select{
+    border: 1px solid red;
+    width: 100%;
+    padding: 8px;
+}
+
+#templateSelect {
+    width: 100%;
+    padding: 8px;
+    border-radius: 2px;
+    border: 1px solid red;
+    transition: 0.3s;
+}
+
+/* Template Colors */
+#templateSelect.classic {
+    background-color: #ff9a9e;
+    color: white;
+}
+
+#templateSelect.romantic {
+    background-color: #c31432;
+    color: white;
+}
+
+#templateSelect.cute {
+    background-color: #ffdde1;
+    color: #8e004f;
+}
+
+.envelope-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #f06292;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+/* Flap */
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ec407a;
+    clip-path: polygon(0 0, 50% 50%, 100% 0);
+    transform-origin: top;
+    transition: transform 0.8s ease;
+}
+
+/* Letter */
+.letter {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    background: white;
+    top: 10%;
+    left: 5%;
+    padding: 15px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.8s ease;
+    text-align: center;
+}
+
+/* Open Animation */
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    transform: translateY(0);
+}
+#cardMessage {
+    margin-bottom: 50px;  /* Adds space below the message */
+}
+.custom-alert {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    background: #ff9a9e;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.custom-alert button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #ff3d6b;
+    font-weight: bold;
+    cursor: pointer;
+}
+

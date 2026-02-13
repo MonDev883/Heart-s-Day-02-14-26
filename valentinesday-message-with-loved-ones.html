@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Valentine Card Generator 🤍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta property="og:title" content="Valentine Card Generator 💖">
+<meta property="og:description" content="Create and download your own Valentine card!">
+<meta property="og:type" content="website">
+</head>
+
+<body>
+
+<div id="customAlert" class="custom-alert" style="display:none;">
+    <strong>Valentine Card Site 🤍 says:</strong>
+    <p id="alertMessage"></p>
+    <button onclick="closeAlert()">OK</button>
+</div>
+
+<div class="container">
+    <h2>Happy Hearts' Day 🤍😊</h2>
+
+    <input type="text" id="nameInput" placeholder="Your Name">
+
+    <textarea id="messageInput" placeholder="Message to your loved one"></textarea>
+
+<!--New Added Code-->
+<select id="templateSelect">
+    <option value="classic">💖 Classic Pink</option>
+    <option value="romantic">🌹 Romantic Red</option>
+    <option value="cute">💕 Cute Pastel</option>
+</select>
+
+
+    <button onclick="generateCard()">Generate Card</button>
+    <button onclick="downloadCard()">Download as PNG</button>
+</div>
+
+
+<div class="envelope-container" id="envelopeContainer" style="display:none;">
+    <div class="envelope" onclick="openEnvelope()">
+        <div class="flap"></div>
+        <div class="letter" id="letter">
+            <h2 id="cardTitle"></h2>
+            <p id="cardMessage"></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="index.js"></script>
+
+
+<footer style="margin-top:20px; font-size:12px; color:white;">
+    Made with 🤍 by Mondev 😊
+</footer>
+
+
+</body>
+</html>
